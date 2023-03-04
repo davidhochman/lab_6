@@ -30,8 +30,8 @@ def encode(password):
     return password
 
 
-run_again = True
-if __name__ == '__main__':
+def menu():
+    run_again = True
     while run_again:
         print('''Menu  
 ------------- 
@@ -44,11 +44,13 @@ if __name__ == '__main__':
         if user_input == 1:
             user_pass = input('Please enter your password to encode: ')
             encoded_pass = encode(user_pass)
-            print('Your password has benn encoded and stored!')
-            print(encoded_pass)
+            print('Your password has benn encoded and stored!\n')
 
         elif user_input == 2:
             print(f'The encoded password is {encoded_pass}, and the original password is {decode(encoded_pass)}.')
 
         elif user_input == 3:
-            run_again = False
+            break
+
+if __name__ == '__main__':
+    menu()

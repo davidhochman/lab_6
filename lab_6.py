@@ -1,7 +1,7 @@
 def encode(password):
     password = list(password)
     for i in range(0, len(password)):
-        if password[i] == '0':
+        if password[i] == '0':          #changes numbers in passcode
             password[i] = 3
         elif password[i] == '1':
             password[i] = 4
@@ -25,7 +25,7 @@ def encode(password):
             pass
 
     password = map(str, password)
-    password = "".join(password)
+    password = "".join(password)            #joins numbers in passcode
 
     return password
 

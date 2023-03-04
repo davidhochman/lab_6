@@ -29,6 +29,24 @@ def encode(password):
 
     return password
 
+def decode(x):
+    # Made by Harrison Lucas
+    num1 = ''
+    for i in str(x):
+        if int(i) >= 3:
+            num1 += str(int(i) -3)
+
+        elif int(i) == 2:
+            num1 += '9'
+
+        elif int(i) == 1:
+            num1 += '8'
+
+        elif int(i) == 0:
+            num1 += '7'
+    return num1
+
+
 
 def menu():
     run_again = True

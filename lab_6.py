@@ -1,4 +1,4 @@
-def encode(password):
+def encode(password):           #main() and encode() made by David Hochman
     password = list(password)
     for i in range(0, len(password)):
         if password[i] == '0':          #changes numbers in passcode
